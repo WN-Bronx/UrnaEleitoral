@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Urna Eleitoral</string>
+    <string-array name="formacao_array">
+        <item> </item>
+        <item>Analfabeto</item>
+        <item>Ensino Médio</item>
+        <item>Graduação</item>
+        <item>Pós graduação</item>
+    </string-array>
+</resources>

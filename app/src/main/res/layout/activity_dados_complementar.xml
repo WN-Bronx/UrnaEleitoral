@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DadosComplementar">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="306dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="53dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/urna" />
+
+    <TextView
+        android:id="@+id/tViewIdade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="296dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Idade :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/eTextIdade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="136dp"
+        android:ems="10"
+        android:hint="+16 anos"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/tViewSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="297dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Sexo :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tViewIdade" />
+
+    <RadioGroup
+        android:id="@+id/rGroupSexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:checkedButton="@id/rButtonMasculino"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTextIdade">
+
+        <RadioButton
+            android:id="@+id/rButtonMasculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="85dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#D50F0F"
+            android:buttonTint="#000000"
+            android:checked="false"
+            android:foregroundTint="#FA0A0A"
+            android:text="Masculino"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rButtonFeminino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foregroundTint="#FA0A0A"
+            android:backgroundTint="#D50F0F"
+            android:buttonTint="#000000"
+            android:text="Feminino" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tViewEscolaridade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="292dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Escolaridade :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rGroupSexo" />
+
+    <Spinner
+        android:id="@+id/spFormacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tViewEscolaridade"
+        app:layout_constraintTop_toBottomOf="@+id/rGroupSexo" />
+
+    <TextView
+        android:id="@+id/tViewCasa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="215dp"
+        android:text="Possui casa Própria ?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tViewEscolaridade" />
+
+    <RadioGroup
+        android:id="@+id/rGroupSouN"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tViewCasa">
+
+        <RadioButton
+            android:id="@+id/rButtonSim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="85dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#D50F0F"
+            android:buttonTint="#000000"
+            android:checked="false"
+            android:foregroundTint="#FA0A0A"
+            android:text="SIM"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rButtonNao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D50F0F"
+            android:buttonTint="#000000"
+            android:foregroundTint="#FA0A0A"
+            android:text="NÃO" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bttVotacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="75dp"
+        android:background="@drawable/button"
+        android:text="VOTAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rGroupSouN"
+        android:onClick="votacao"
+    />
+
+
+</android.support.constraint.ConstraintLayout>

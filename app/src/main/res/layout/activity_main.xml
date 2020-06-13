@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/iViewUrna"
+        android:layout_width="406dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="2dp"
+        android:paddingLeft="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/urnaeletronica" />
+
+    <TextView
+        android:id="@+id/tViewCandidatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="171dp"
+        android:text="Candidatos a Presidente"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iViewUrna" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="25dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tViewCandidatos" />
+
+    <RadioGroup
+        android:id="@+id/rGroupCandidato"
+        android:layout_width="395dp"
+        android:layout_height="233dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <RadioButton
+            android:id="@+id/rButtonJose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50dp"
+            android:paddingLeft="10sp"
+            android:backgroundTint="#D50F0F"
+            android:buttonTint="#000000"
+            android:foregroundTint="#FA0A0A"
+            android:text="José"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rButtonLuis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50dp"
+            android:paddingLeft="10sp"
+            android:backgroundTint="#D50F0F"
+            android:buttonTint="#000000"
+            android:foregroundTint="#FA0A0A"
+            android:text="Luís"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rButtonMaria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50dp"
+            android:paddingLeft="10sp"
+            android:backgroundTint="#D50F0F"
+            android:buttonTint="#000000"
+            android:foregroundTint="#FA0A0A"
+            android:text="Maria"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rButtonJoao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50dp"
+            android:paddingLeft="10sp"
+            android:backgroundTint="#D50F0F"
+            android:buttonTint="#000000"
+            android:foregroundTint="#FA0A0A"
+            android:text="João"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rButtonBranco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50dp"
+            android:paddingLeft="10sp"
+            android:backgroundTint="#D50F0F"
+            android:buttonTint="#000000"
+            android:foregroundTint="#FA0A0A"
+            android:text="Branco"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rButtonNulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50dp"
+            android:paddingLeft="10sp"
+            android:backgroundTint="#D50F0F"
+            android:buttonTint="#000000"
+            android:foregroundTint="#FA0A0A"
+            android:text="Nulo"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bttVotar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="75dp"
+        android:background="@drawable/button"
+        android:text="VOTAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rGroupCandidato"
+        android:onClick="votacao"/>
+
+</android.support.constraint.ConstraintLayout>
